@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // testng
+    compile group: 'org.testng', name: 'testng', version: '7.0.0'
+    // selenium-java
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59'
+    implementation 'org.jetbrains:annotations:15.0'
+
+}
+
+test{
+    useTestNG(){
+        suites 'testng.xml'
+    }
+}

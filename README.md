@@ -12,10 +12,12 @@ Tools to install
     4. Install Docker, Docker Compose https://www.docker.com/products/docker-desktop
 
 Running tests.
-
-    1. Clone repo
-    2. Run cmd 'docker-compose up' in project's root
-    3. Run 'testng.xml' using TestNG Suite
+    
+    1. Clone repo to your workspace directory
+    2. Navigate to the project repo
+    3. Run 'docker-compose up' command to bring up docker images where tests will be executed
+        *current tests will run on debug versions of selenium nodes. use VNC or similar tool to monitor execution
+    3. Run 'gradle clean test' to execute tests
     
 Reporting.  
    
