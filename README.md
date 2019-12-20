@@ -15,5 +15,15 @@ Running tests.
 
     1. Clone repo
     2. Run cmd 'docker-compose up' in project's root
-    3. Run tests. Currently setup to debug images for Firefox & Chrome nodes to view during test execution
+    3. Run 'testng.xml' using TestNG Suite
     
+Reporting.  
+   
+     1. View reports on reportportal 'http://IP_ADDRESS:8080'
+     *Use next login\pass for access: default\1q2w3e
+     2. run cmd 'docker ps -a' to get the IP_ADRRESS
+     
+     
+
+
+      

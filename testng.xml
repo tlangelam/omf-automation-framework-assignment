@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite" thread-count="2" >
+    <parameter name="hubUrl" value="http://0.0.0.0:4444/wd/hub" />
+    <parameter name="baseUrl" value="https://www.oldmutualfinance.co.za/personal-loans" />
+    <test name="RunChrome">
+        <parameter name="browser" value="CHROME" />
+        <classes>
+            <class name="TestPersonalLoans" />
+        </classes>
+    </test>
+    <test name="RunOnFirefox">
+        <parameter name="browser" value="FIREFOX" />
+        <classes>
+            <class name="TestPersonalLoans"/>
+        </classes>
+    </test>
+</suite>

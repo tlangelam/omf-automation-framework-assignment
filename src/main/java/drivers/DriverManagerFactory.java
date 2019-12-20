@@ -1,19 +1,18 @@
 package drivers;
 
+import org.openqa.selenium.remote.BrowserType;
+
 public class DriverManagerFactory{
 
     private static DriverManager driverManager;
 
-    public static DriverManager getDriverManager(DriverType type){
+    public static DriverManager getDriverManager(String type){
 
 
-        switch (type){
-            case FIREFOX:
-                driverManager = new FireFoxBrowserDriver();
-                break;
-
-            default:
-                driverManager = new ChromeBrowserDriver();
+        if (BrowserType.FIREFOX.equals(type)) {
+            driverManager = new FireFoxBrowserDriver();
+        } else {
+            driverManager = new ChromeBrowserDriver();
         }
 
         return driverManager;
